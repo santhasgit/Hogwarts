@@ -1,0 +1,153 @@
+body{
+  font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+.bpw-widget-btn{
+    border-radius:50%;
+    background-color: #fc4ab8 ;
+}
+.bpw-widget-btn:hover{
+    background-color: #fc4ab8 ;
+}
+.bpw-powered{
+    display:none;
+}
+
+#bp-widget{
+    box-shadow: rgba(0,0,0,0.16) 0px 5px 40px;
+    }
+    .bpw-from-user .bpw-chat-bubble .bpw-chat-bubble-content{
+      background-color:#ff6185;
+    }
+    
+    
+    .bpw-from-bot .bpw-chat-bubble .bpw-chat-bubble-content
+    {
+      background-color:rgb(245,245,245);
+    }
+    .bpw-keyboard-quick_reply-dropdown button{
+      height: 33px;
+        min-height: 30px !important;
+        background: #72324a;
+        border: none;
+        color: white;
+        border-radius: 25px;
+    }
+    .bpw-keyboard-quick_reply-dropdown button:hover{
+        background: #72324a;
+        border: none;
+        color: white;
+    }
+    .bpw-message-group > :not(:last-child):not(.hidden) {
+      border: none;
+    }
+    .bpw-from-bot .bpw-chat-bubble {
+        border: 1px solid black;
+      }
+    .bpw-powered{
+        display: none;
+    }
+    .css-bgvzuu-indicatorSeparator{
+      display: none;
+    }
+    .css-bg1rzq-control,.css-1szy77t-control {
+    border: none !important;
+    background: rgb(255 67 88 / 17%) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    }
+    .bpw-keyboard-quick_reply-dropdown{
+      align-items: center;
+        text-align: center;
+    }
+    .bpw-keyboard-quick_reply button{
+        border-radius: 25px;
+        background-color: rgb(255 67 88 / 17%);
+        color: black;
+        border: none;
+      }
+      .bpw-keyboard-quick_reply button:hover{
+          color: #000000;
+      }
+      .bpw-chat-bubble-content{
+          border-radius: 25px;
+      }
+      /* //Copied */
+        .bpw-chat-bubble:last-of-type {
+          border-bottom-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+        }
+        
+        .bpw-chat-bubble:first-of-type {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+        }
+       .bpw-from-user .bpw-chat-bubble:last-of-type {
+          border-bottom-right-radius: 0px !important;
+          border:none;
+        }
+        
+        .bpw-from-bot .bpw-chat-bubble:last-of-type {
+          border-bottom-left-radius: 0px;
+          border:none;
+        }  
+        .bpw-date-container .bpw-small-line {
+          border-bottom: none !important;
+        }
+        
+        .bpw-date-container {
+          font-weight: 700;
+          font-size: 14px;
+        }
+      
+        .bpw-header-container button{
+          color:#fff;
+          fill:#fff;
+        }
+        .bpw-chat-container{
+          box-shadow: rgba(0,0,0,0.16) 0px 5px 40px;
+          border:none;
+        }
+        .bpw-bot-avatar img,
+        .bpw-bot-avatar svg {
+          border: none;
+          border-radius: 50%;
+        }
+        .bpw-composer {
+            padding: 10px;
+            background: none;
+            border: none;
+          }
+          .bpw-header-container{
+            background-color: #72324a;
+            color: #ffff;
+          }
+          .bpw-composer textarea {
+            background: #ececec;
+            border-radius: 20px;
+            font-size: 1.25rem;
+            overflow: hidden;
+          }
+          
+          .send-btn {
+            position: absolute;
+            right: 30px;
+            bottom: 28px;
+            border: none;
+            border-radius: 5px;
+            background: #fff;
+            padding: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+          }
+          .bpw-send-button{
+              bottom:25px !important;
+              background-color: #72324a;
+              color:#fff;
+              padding: 16px;
+              right: 12px !important;
+              border-radius: 0px 20px 20px 0px;
+          }
+         .send-btn:hover {
+            background: #d8d8d8 !important;
+          }

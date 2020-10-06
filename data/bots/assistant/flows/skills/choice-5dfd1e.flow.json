@@ -1,0 +1,96 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "bj7yd5ep0p",
+    "contentId": "builtin_single-choice-QPl7CX",
+    "invalidContentId": "",
+    "keywords": {
+      "Prescription": [
+        "Prescription",
+        "Last prescription Details"
+      ],
+      "Report": [
+        "Report",
+        "Consolidated Report"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-QPl7CX {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "795657"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"bj7yd5ep0p\",\"contentId\":\"builtin_single-choice-QPl7CX\",\"invalidContentId\":\"\",\"keywords\":{\"Prescription\":[\"Prescription\",\"Last prescription Details\"],\"Report\":[\"Report\",\"Consolidated Report\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-bj7yd5ep0p'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "100778"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"bj7yd5ep0p\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-bj7yd5ep0p']) > Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "097192"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "419840"
+    }
+  ]
+}

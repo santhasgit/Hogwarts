@@ -1,0 +1,132 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "df052970ef",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "true",
+          "node": "catch"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-lbs0Re"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "114b7e7782",
+      "name": "catch",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-1dea"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-SKQxXN"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "a5aba295cd",
+      "name": "node-1dea",
+      "next": [
+        {
+          "condition": "true",
+          "node": "CallAPI-8b3e8c"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "549b836e3a",
+      "name": "node-ed53",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-5dfd1e"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown-91OJBY"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"patient\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-5dfd1e",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-5dfd1e",
+      "flow": "skills/choice-5dfd1e.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Prescri...]",
+          "condition": "temp['skill-choice-ret-bj7yd5ep0p'] == \"Prescription\"",
+          "node": "node-cd2d"
+        },
+        {
+          "caption": "User picked [Report]",
+          "condition": "temp['skill-choice-ret-bj7yd5ep0p'] == \"Report\"",
+          "node": "node-4684"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "e5b1998d5f",
+      "name": "node-cd2d",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-BeU9jo"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "74d4519406",
+      "name": "node-4684",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-8b8-Xy"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-8b3e8c",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-8b3e8c",
+      "flow": "skills/CallAPI-8b3e8c.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": "node-ed53"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}

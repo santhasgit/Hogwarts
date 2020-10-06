@@ -1,0 +1,53 @@
+{
+  "locked": false,
+  "disabled": false,
+  "private": false,
+  "details": {
+    "website": "",
+    "phoneNumber": "",
+    "termsConditions": "",
+    "emailAddress": "",
+    "avatarUrl": "/api/v1/bots/assistant/media/v6fr0agkvaz49ih180hx-nurse-bot-front.png",
+    "coverPictureUrl": "",
+    "privacyPolicy": ""
+  },
+  "$schema": "../../bot.config.schema.json",
+  "description": "A bot to help you get started",
+  "active": true,
+  "version": "12.10.6",
+  "author": "Botpress, Inc.",
+  "license": "AGPL-3.0",
+  "imports": {
+    "modules": [],
+    "incomingMiddleware": [],
+    "outgoingMiddleware": [],
+    "contentTypes": [
+      "builtin_action-button",
+      "builtin_card",
+      "builtin_carousel",
+      "builtin_image",
+      "builtin_single-choice",
+      "builtin_text",
+      "dropdown"
+    ]
+  },
+  "dialog": {
+    "timeoutInterval": "5m"
+  },
+  "logs": {
+    "expiration": "1 week"
+  },
+  "defaultLanguage": "en",
+  "languages": [
+    "en"
+  ],
+  "id": "assistant",
+  "name": "Assistant",
+  "pipeline_status": {
+    "current_stage": {
+      "id": "prod",
+      "promoted_on": "2020-10-01T11:19:50.941Z",
+      "promoted_by": "santhas92@gmail.com"
+    }
+  }
+}

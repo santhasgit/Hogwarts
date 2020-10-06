@@ -1,0 +1,317 @@
+<!DOCTYPE html><html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    TogetherJSConfig_hubBase = "https://brazen-zinc-custard.glitch.me/";
+    </script>
+  <script src="https://togetherjs.com/togetherjs-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  </head>
+<style>
+.container{border:1px solid black; width:60%; margin-top:10px; margin-bottom:10px;}
+table {border:none;}
+.table>thead>tr>th {border:none;}
+.table>tbody>tr>td{border:none;}
+.row{padding:10px;}
+hr{border:1px solid black;}
+.thead-dark{
+  color: #fff;
+    background-color: #343a40;
+    border-color: #454d55;
+}
+</style>
+<script type="text/javascript">
+
+  //var TogetherJSConfig_toolName = "{% trans "Collaborate" %}";
+  var TogetherJSConfig_dontShowClicks = true;
+  var TogetherJSConfig_disableWebRTC = true;
+  var TogetherJSConfig_cloneClicks = true
+  
+
+</script>
+  <body>
+  <div class="container">
+   
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/scanreport.jpe" class="img-fluid" style="width:100%;"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="row">
+<div class="card">
+  <div class="card-body text-center">
+    <button onclick="TogetherJS(this); return false;" class="btn btn-primary">Collaborate</button>
+    <h2> Final Report</h2>
+  </div>
+</div>
+	<div>
+	<h3> <span>Patient Information</span>  <button type="button" style="float:right;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    View Scan Report
+   </button></h3>
+	</div>
+	<hr/>	 
+</div>
+<div class="row">
+  <div class="col-md-8 offset-3">
+    <table class="table table-borderless">
+   <thead class="thead-dark">
+     <tr>
+       <th>Identification Data </th>
+       <th></th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Name </td>
+       <td id="p_name">John </td>
+     </tr>
+     <tr>
+       <td>ID </td>
+       <td id="p_id">YYYY </td>
+     </tr>
+     <tr>
+      <td>Age </td>
+      <td id="p_age">35 </td>
+    </tr>
+   </tbody>
+ </table>
+   </div>
+  </div>
+<div class="row">
+    <div class="col-md-8">
+       <table class="table table-borderless">
+    <thead class="thead-dark">
+      <tr>
+        <th>Genernal BioChemistry </th>
+        <th> 11-10-2019</th>
+        <th> 08-07-2019</th>
+        <th> 15-03-2019</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Creatine (mg/DL):</td>
+        <td>1.00</td>
+        <td>3.00</td>
+        <td>2.10</td>
+        </tr> 
+      <tr><td>ASAT(U/L): </td>
+        <td>8.00</td>
+        <td>10.00</td>
+        <td>5.00</td>
+      </tr> 
+        <tr><td>ALAT(U/L): </td>
+          <td>11.30</td>
+          <td>12.30</td>
+          <td>10.50</td>
+        </tr>
+        <tr>
+          <td>GGT(U/L): </td>
+        <td>9.00</td>
+        <td>6.00</td>
+        <td>7.00</td>
+        </tr>  
+        <tr> <td>Total Bilirubin(mg/dL): </td>
+          <td>8.00</td>
+          <td>6.00</td>
+          <td>4.00</td>
+        </tr>
+      <tr><td>Hemolized Sample: </td>
+        <td>No</td>
+        <td>No</td>
+        <td>No</td>
+      </tr>
+        </tbody>
+  </table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Blood Drawn Realization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Blood Drawn Date: </td>
+        <td>11-10-2019</td>
+      </tr>
+    </tbody>
+  </table>    
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th>Urine Tumor Markers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>8-OHDG(ng/mL): </td>
+        <td>15.10</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th>Urine Drawn Realization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Urine Drawn Date: </td>
+        <td>11-10-2019</td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+    
+  </div>
+<!--second data-->
+  <div class="row">
+    <div class="col-md-8">
+     <table class="table table-borderlesss">
+    <thead class="thead-dark">
+      <tr>
+        <th>Comorbidities</th>
+        <th> 11-10-2019</th>
+        <th> 08-07-2019</th>
+        <th> 15-03-2019</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Atheroclerosis: </td>
+        <td>No </td>
+        <td>No </td>
+        <td>No </td>
+      </tr>
+      <tr>
+        <td>chronic Liver Disease: </td>
+        <td>No </td>
+        <td>No </td>
+        <td>No </td>
+      </tr>
+      <tr>
+        <td>Diabetes Mellitus 1 or 2: </td>
+        <td>No </td>
+        <td>No </td>
+        <td>No </td>
+      </tr>
+      <tr>
+        <td>Jaundice: </td>
+        <td>No </td>
+        <td>No </td>
+        <td>No </td>
+      </tr>
+      <tr>
+        <td>Renal failure: </td>
+        <td>No </td>
+        <td>No </td>
+        <td>No </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-borderless">
+    <thead class="thead-dark">
+      <tr>
+        <th>Serum Tumor Makers </th>
+        <th> 11-10-2019</th>
+        <th> 08-07-2019</th>
+        <th> 15-03-2019</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CA (U/mL):</td>
+        <td>18.50</td>
+        <td>15.50</td>
+        <td>12.50</td>
+        </tr> 
+      <tr><td>CEA(ng/mL): </td>
+        <td>3.00</td>
+        <td>2.00</td>
+        <td>0.75</td>
+      </tr> 
+        <tr><td>EGAR(ng/mL): </td>
+          <td>6.00</td>
+          <td>5.00</td>
+          <td>2.00</td>
+        </tr>
+        <tr>
+          <td>NGAL(ng/mL): </td>
+        <td>5.24</td>
+        <td>4.24</td>
+        <td>1.24</td>
+        </tr>  
+        <tr> <td>NSE(ng/mL): </td>
+          <td>7.25</td>
+          <td>5.0</td>
+          <td>3.85</td>
+        </tr>
+      
+        </tbody>
+  </table>
+  <table class="table table-borderless">
+    <thead class="thead-dark">
+      <tr>
+        <th>LifeStyle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Smoking</td>
+        <td>Currently</td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+   
+    <div class="col-md-4">
+          
+    </div>
+  </div>
+  <hr/>
+<div class="row">
+  <h3>Outcome</h3>
+  <h4>Results</h4>
+    <p>Some Tumor markers are outside the reference range and suggest malignancy</p>
+    <h4>Comments</h4>
+    <p>In absence of Comorbidities that are well-known source of False Positive(FP) in healthy patients by increasing some Tumor Markers levels,
+      whole Tumor Markers levels suggest malignancy.</p>
+  </div>
+</div>
+</body>
+<script>
+  $(document).ready(function(){
+    $.urlParam = function(name){
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	return results[1] || 0;
+}
+var getpatientname = $.urlParam('a');
+getpatientname = getpatientname.trim();
+    console.log(window.location.href,getpatientname);
+    var geturl = "https://hogwartsserver.herokuapp.com/elements?a="+getpatientname;
+
+    $.get( geturl, function( data ) {
+      console.log(data); 
+       $('#p_name').html(data.Name);
+       $('#p_age').html(data.age);
+       $('#p_id').html(data.Id);
+});
+  });
+  </script>
+</html>

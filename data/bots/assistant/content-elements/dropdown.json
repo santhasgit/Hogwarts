@@ -1,0 +1,33 @@
+[
+  {
+    "id": "dropdown-91OJBY",
+    "formData": {
+      "buttonText$en": "Submit",
+      "width$en": 200,
+      "displayInKeyboard$en": true,
+      "typing$en": true,
+      "message$en": "Select a patient",
+      "options$en": [
+        {
+          "label": "{{session.response.body.details.0.name}}",
+          "value": "{{session.response.body.details.0.name}}"
+        },
+        {
+          "label": "{{session.response.body.details.1.name}}",
+          "value": "{{session.response.body.details.1.name}}"
+        },
+        {
+          "label": "{{session.response.body.details.2.name}}",
+          "value": "{{session.response.body.details.2.name}}"
+        },
+        {
+          "label": "{{session.response.body.details.3.name}}",
+          "value": "{{session.response.body.details.3.name}}"
+        }
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-10-01T11:38:41.054Z",
+    "modifiedOn": "2020-10-05T11:28:25.618Z"
+  }
+]
